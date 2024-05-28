@@ -42,6 +42,9 @@
 #endif
 #endif
 
+// winsock2.h has to be included ahead of windows.h, which includes winsock.h
+// by default, to avoid types and macro redefinition errors
+#include <winsock2.h>
 #include <windows.h>
 
 #if _MSC_VER <= 1200
