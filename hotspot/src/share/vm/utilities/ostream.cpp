@@ -1530,6 +1530,8 @@ bufferedStream::~bufferedStream() {
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
+#elif defined(_WINDOWS)
+#include <Ws2tcpip.h>
 #endif
 
 // Network access
